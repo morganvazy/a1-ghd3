@@ -6,8 +6,13 @@
 <script>
   console.log(d3); // test if d3 is loaded
   // Add an SVG
+  const svg = d3.create("svg").attr("width", 640).attr("height",400);
   // Add Rectangles
+  svg.append("rect").attr("x", 50).attr("y",40).attr("width",120).attr("height",80)
+    .attr("fill","blue");
   // Add Circles
   // Add Lines
   // Add Polygons
+
+  container.append(svg.node());
 </script>
