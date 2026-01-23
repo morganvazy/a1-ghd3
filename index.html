@@ -41,6 +41,65 @@
   svg.append("rect").attr("x", 365).attr("y",18).attr("width",38).attr("height",65)
     .attr("fill","#157358").attr("transform", "rotate(1,365,16)"); //window 6
 
+    //basic structure of painting
+  svg.append("polygon").attr("points", "0,400 640,400 640,250 0,300")
+    .attr("fill", "#5c9e80"); //sidewalk
+  
+  svg.append("polygon").attr("points", "250,110 640,95 640,300 250,270")
+    .attr("fill", "#e0de90"); //internal wall
+  svg.append("rect").attr("x", 600).attr("y",150).attr("width",30).attr("height",150)
+    .attr("fill","#ab7f1a")//inside door
+  svg.append("circle").attr("r",5).attr("cx",615).attr("cy",190).attr("fill","#402e05"); //door decor
+
+  //window and store front
+  svg.append("polygon").attr("points", "0,100 0,267 250,270 540,270 540,125 250,115 250,100")
+    .attr("fill", "#084d36"); //window and store front
+  svg.append("rect").attr("x", 30).attr("y",125).attr("width",75).attr("height",115)
+    .attr("fill","#1f1704").attr("transform", "rotate(-1,30,150)");//left window
+  svg.append("rect").attr("x", 30).attr("y",210).attr("width",75).attr("height",30)
+    .attr("fill","#7d490a").attr("transform", "rotate(-1,30,114)");//left window brown box
+  svg.append("rect").attr("x", 115).attr("y",113).attr("width",45).attr("height",140)
+    .attr("fill","#1f1704").attr("transform", "rotate(-1,115,115)");//door
+  svg.append("rect").attr("x", 170).attr("y",125).attr("width",75).attr("height",115)
+    .attr("fill","#1f1704").attr("transform", "rotate(-1,170,125)");//right window
+  svg.append("rect").attr("x", 171).attr("y",210).attr("width",75).attr("height",30)
+    .attr("fill","#7d490a").attr("transform", "rotate(-1,170,210)");//right window brown box
+  svg.append("line").attr("x1",180).attr("y1",125).attr("x2",181).attr("y2",240)
+  .attr("stroke", "#26422d").attr("stroke-width",5); //line that intersects right window
+  svg.append("rect").attr("x", 285).attr("y",125).attr("width",75).attr("height",115)
+    .attr("fill","#1f1704").attr("transform", "rotate(-1,200,125)");//store 2 L window
+  svg.append("rect").attr("x", 370).attr("y",127).attr("width",45).attr("height",136)
+    .attr("fill","#1f1704").attr("transform", "rotate(-1,115,115)");//store 2 door
+  svg.append("rect").attr("x", 430).attr("y",129).attr("width",75).attr("height",115)
+    .attr("fill","#1f1704").attr("transform", "rotate(-1,200,125)");//store 2 R window
+  svg.append("polygon").attr("points", "250,270 540,270 540,125 250,115 250,100")
+  .attr("opacity", 0.3).attr("fill", "#9e5d55"); //window and store front opacity (thru window)
+
+  svg.append("polygon").attr("points", "0,0 640,0 640,99 125,45 125,250 0,250").attr("opacity", 0.3)
+  .attr("fill", "#1a0f02") //outside shadow
+  svg.append("polygon").attr("points", "0,315 0,265 250,255 375,265")
+    .attr("fill", "#646769"); //street
+  svg.append("polygon").attr("points", "250,270 330,264 330, 280")
+    .attr("fill", "#84bf9b"); //internal rim of outer wall
+  svg.append("polygon").attr("points", "330,285 330,260 550,245 640,265 640,300")
+    .attr("fill", "#632110"); //counter
+  svg.append("polygon").attr("points", "360,265 530,255 560,255 640,275 640,290")
+    .attr("fill", "black").attr("opacity", 0.2); //counter shadow
+  svg.append("line").attr("x1",287).attr("y1",107).attr("x2",287).attr("y2",275)
+  .attr("stroke", "#98d9b4").attr("stroke-width",5); //third line from left
+  svg.append("polygon").attr("points", "640,400 250,325 250,270 640,300")
+    .attr("fill", "#26422d"); //bottom wall
+  svg.append("polygon").attr("points", "640,0 640,95 250,110 250,70")
+    .attr("fill", "#26422d"); //top wall
+  svg.append("line").attr("x1",253).attr("y1",110).attr("x2",253).attr("y2",270)
+  .attr("stroke", "#b4ede7").attr("stroke-width",5); //outermost line for window
+  svg.append("line").attr("x1",273).attr("y1",107).attr("x2",273).attr("y2",275)
+  .attr("stroke", "#26422d").attr("stroke-width",5); //second line from left
+  svg.append("line").attr("x1",585).attr("y1",90).attr("x2",585).attr("y2",300)
+  .attr("stroke", "#26422d").attr("stroke-width",5); //rightmost line
+  svg.append("rect").attr("x", 275).attr("y",30).attr("width",400).attr("height",32)
+    .attr("fill","#593323").attr("transform", "rotate(-8.5,300,30)"); //sign
+
   
   document.getElementById("container").append(svg.node());
 </script>
