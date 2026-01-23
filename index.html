@@ -106,6 +106,21 @@
   svg.append("rect").attr("x", 275).attr("y",30).attr("width",400).attr("height",32)
     .attr("fill","#593323").attr("transform", "rotate(-8.5,300,30)"); //sign
 
+//writing Woo on the sign with path for W and circles for 00
+
+  //path
+  const wCoords = [
+  [380, 24],[400, 40],[410, 29],[420, 38],[435, 18]
+]; 
+  const lineGenerator = d3.line();
+  const pathData = lineGenerator(wCoords);
+  svg.append("path").attr("d", pathData).attr("stroke", "#6e5d10").attr("fill", "none").attr("stroke-width", 5);
+
+  svg.append("circle").attr("r",10).attr("cx",450).attr("cy",24).attr("fill","none")
+  .attr("stroke", "#6e5d10").attr("stroke-width", 5); //first O
+  svg.append("circle").attr("r",10).attr("cx",475).attr("cy",22).attr("fill","none")
+  .attr("stroke", "#6e5d10").attr("stroke-width", 5); //second O
+  
   //turning lights on and off
   //using d3 documentation "Handling events" for reference
   //using JavaScript lessons on codecademy for if, then syntax
