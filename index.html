@@ -26,5 +26,21 @@
     .attr("fill","#1f1704").attr("transform", "rotate(1,290,15)"); //window 5
   svg.append("rect").attr("x", 365).attr("y",18).attr("width",38).attr("height",65)
     .attr("fill","#1f1704").attr("transform", "rotate(1,365,16)"); //window 6
+
+  //curtains
+  svg.append("rect").attr("x", 0).attr("y",15).attr("width",25).attr("height",44)
+    .attr("fill","#157358") //window 1
+  svg.append("rect").attr("x", 65).attr("y",16).attr("width",38).attr("height",17)
+    .attr("fill","#157358").attr("transform", "rotate(1,65,15)"); //window 2
+  svg.append("rect").attr("x", 140).attr("y",16).attr("width",38).attr("height",35)
+    .attr("fill","#157358").attr("transform", "rotate(1,140,15)"); //window 3
+  svg.append("rect").attr("x", 215).attr("y",17).attr("width",38).attr("height",36)
+    .attr("fill","#157358").attr("transform", "rotate(1,215,15)"); //window 4
+  svg.append("rect").attr("x", 290).attr("y",17).attr("width",38).attr("height",20)
+    .attr("fill","#157358").attr("transform", "rotate(1,290,15)"); //window 5
+  svg.append("rect").attr("x", 365).attr("y",18).attr("width",38).attr("height",65)
+    .attr("fill","#157358").attr("transform", "rotate(1,365,16)"); //window 6
+
+  
   document.getElementById("container").append(svg.node());
 </script>
