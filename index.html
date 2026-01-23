@@ -100,6 +100,23 @@
   svg.append("rect").attr("x", 275).attr("y",30).attr("width",400).attr("height",32)
     .attr("fill","#593323").attr("transform", "rotate(-8.5,300,30)"); //sign
 
+  //turning lights on and off
+  //using d3 documentation "Handling events" for reference
+  //using JavaScript lessons on codecademy for if, then syntax
+  let lightOn = true;
+  
+  let wholeShadow = svg.append("rect").attr("x", 0).attr("y",0).attr("width",640).attr("height",400)
+    .attr("fill","#1a0f02").attr("opacity", 0); //whole shadow
+  let insideShadow = svg.append("polygon").attr("points", "250,270 250,110 640,95 640,300")
+    .attr("fill", "#1a0f02").attr("opacity", 0); //inside shadow
+
+  const lightChange = svg.append("rect").attr("x", 590).attr("y", 200)
+    .attr("width", 5).attr("height", 7).attr("fill", "#38230a")
+    .on("click",() => {
+      lightOn = !lightOn;
+      wholeShadow.attr("opacity", lightOn ? 0 : 0.45);
+      insideShadow.attr("opacity", lightOn ? 0 : 0.5);
+    })
   
   document.getElementById("container").append(svg.node());
 </script>
