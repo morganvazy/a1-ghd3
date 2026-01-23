@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <div id="container"></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-
-<script>
+<script type="module">
+//Using W3 schools reference guides for SVG elements
+//Used D3 documentation for the general structure of append statements
+  
   console.log(d3); // test if d3 is loaded
   // Add an SVG
   const svg = d3.create("svg").attr("width", 640).attr("height",400);
-  // Add Rectangles
-  svg.append("rect").attr("x", 50).attr("y",40).attr("width",120).attr("height",80)
-    .attr("fill","blue");
-  // Add Circles
-   svg.append("circle").attr("r",40).attr("cx",200).attr("cy",200).attr("fill","red");
-  // Add Lines
-  // Add Polygons
-
-  document.getElementById("container").append(svg.node()); /*used ChatGPT to help me with this line b/c
-  I am not familiar with the specifics of appending the svg*/
+  
+  //start Nighthawks
+  //red houses in the background
+  svg.append("rect").attr("x", 0).attr("y",0).attr("width",640).attr("height",100)
+    .attr("fill","#a6300c"); //red houses base
+  //red house windows
+  svg.append("rect").attr("x", 0).attr("y",15).attr("width",25).attr("height",65)
+    .attr("fill","#1f1704") //window 1
+  svg.append("rect").attr("x", 65).attr("y",16).attr("width",38).attr("height",65)
+    .attr("fill","#1f1704").attr("transform", "rotate(1,65,15)"); //window 2
+  svg.append("rect").attr("x", 140).attr("y",16).attr("width",38).attr("height",65)
+    .attr("fill","#1f1704").attr("transform", "rotate(1,140,15)"); //window 3
+  svg.append("rect").attr("x", 215).attr("y",17).attr("width",38).attr("height",65)
+    .attr("fill","#1f1704").attr("transform", "rotate(1,215,15)"); //window 4
+  svg.append("rect").attr("x", 290).attr("y",17).attr("width",38).attr("height",65)
+    .attr("fill","#1f1704").attr("transform", "rotate(1,290,15)"); //window 5
+  svg.append("rect").attr("x", 365).attr("y",18).attr("width",38).attr("height",65)
+    .attr("fill","#1f1704").attr("transform", "rotate(1,365,16)"); //window 6
+  document.getElementById("container").append(svg.node());
 </script>
